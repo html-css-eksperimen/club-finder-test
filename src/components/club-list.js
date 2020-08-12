@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import './club-item';
 
 class ClubList extends HTMLElement {
@@ -41,7 +42,7 @@ class ClubList extends HTMLElement {
 
     renderError(message) {
         console.log('render error', message);
-        const elFallback = /*html*/ `<h2 class="placeholder">${message}</h2>`;
+        const elFallback = /* html */ `<h2 class="placeholder">${message}</h2>`;
 
         const styleEl = /* html */ `
         <style>

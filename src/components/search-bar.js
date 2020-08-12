@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 class SearchBar extends HTMLElement {
     constructor() {
         super();
