@@ -24,7 +24,12 @@ class ClubItem extends HTMLElement {
 
     render() {
         if (Object.entries(this._clubitem).length > 0) {
-            const { name, fanArt, description } = this._clubitem;
+            // const { name, fanArt, description } = this._clubitem;
+            const {
+                strTeam: name,
+                strTeamBadge: fanArt,
+                strDescriptionEN: description,
+            } = this._clubitem;
 
             const elementClubs = /* html */ `
             <img class="fan-art-club" src="${fanArt}" alt="Fan Art">

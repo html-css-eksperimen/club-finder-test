@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import '../../components/club-list';
 import '../../components/search-bar';
 import DataSource from '../data/data-source';
@@ -10,8 +11,16 @@ const main = () => {
     const onButtonSearchClicked = () => {
         // let dataSource = new DataSource(renderResult, fallbackResult);
         // dataSource.searchClub(searchElement.value);
-        DataSource.searchClubsAsync(searchElement.valueInput)
-            .then(renderResult)
+        // DataSource.searchClubAPI(searchElement.valueInput)
+        //     .then(renderResult)
+        //     .catch(fallbackResult);
+        const datasource = new DataSource();
+        datasource
+            .searchClubAPI(searchElement.valueInput)
+            .then((result) => {
+                console.log(result);
+                renderResult(result);
+            })
             .catch(fallbackResult);
     };
 
