@@ -10,6 +10,7 @@ const common = require('./webpack.config.common');
 
 const prodConf = {
     mode: 'production',
+    entry: path.resolve(__dirname, 'src', 'app.js'),
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
@@ -56,7 +57,6 @@ const prodConf = {
             }),
         ],
     },
-    entry: path.resolve(__dirname, 'src', 'app.js'),
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
